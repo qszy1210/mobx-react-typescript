@@ -1,0 +1,25 @@
+$testColor: #ccc;
+
+.business-condition {
+  // display: table;
+  height: 100%;
+  width: 100%;
+  
+  .bc-row{
+    // display: table-row;
+    width: 100%;
+    >div {
+      background-color: $testColor;
+      margin: 8px 20px ;
+    }
+  }
+  .title{
+    height: 48px;
+  }
+  .info{
+    height: 140px;
+  }
+  .detail{
+    height: 530px;
+  }
+}

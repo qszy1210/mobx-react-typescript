@@ -1,0 +1,17 @@
+.summary-operation-date{
+  .label:hover{
+    background-color: darken(#fff, 0.08);
+  }
+  .label:active{
+    background-color: darken(#fff, 0.18);
+  }
+  .label.selected{
+    background-color: #fce8d8;
+  }
+  .label.selected:hover{
+    background-color: darken(#fce8d8, 0.08);
+  }
+  .label.selected:active{
+    background-color: darken(#fce8d8, 0.18);
+  }
+}

@@ -1,0 +1,221 @@
+// todo 去掉此处,
+body{
+  background-color: #eff1f4;
+}
+
+
+$backgroundColor: #eff1f4;
+$blockBackgroundColor: #fff;
+$baseWidth: 1160px;
+$rightBlockWidth: 283px;
+
+$hoverColor: #f00;
+
+.summary-operation {
+  min-width: $baseWidth;
+  height: 100%;
+  width: 100%;
+  background-color: #eff1f4;
+  overflow: hidden;
+
+  .summary-operation-wrapper{
+    box-sizing: border-box;
+    width: 100%;
+    padding: 10px 25px 20px 12px;
+    border-collapse: separate;
+    border-spacing: 12px;
+  }
+  .row {
+    display: block;
+    margin-bottom: 12px;
+    .cell {
+      display: inline-block;
+      background-color: #fff;
+    }
+  }
+  .title {
+    text-align: center;
+    width: 100%;
+    .cell {
+      width: 100%;
+      height: 48px;
+      vertical-align: middle;
+
+      position: relative;
+
+      .check-flow{
+        float: right;
+        width: 112px;
+        position: absolute;
+        right: 0;
+        top: 50%;
+        margin-top: -10px;
+      }
+    }
+
+  }
+
+  .content{
+    .left{
+      box-sizing: border-box;
+      width: calc(100% - #{$rightBlockWidth} - 12px);
+      background-color: $backgroundColor;
+      >div{
+        background-color: $blockBackgroundColor;
+        margin-bottom: 12px;
+      }
+
+      .so-block-content{
+        margin-top: 23px;
+      }
+
+      .info{
+        height: 151px;
+        .so-block-content{
+          margin-top: 12px;
+          >div{
+            display: inline-block;
+          }
+
+          .so-block-content-item-complex{
+            width: calc(100% - 124px);
+          }
+          .so-block-content-item{
+
+          }
+
+          .info-right{
+            border-collapse: collapse;
+            display: inline-block;
+            vertical-align: top;
+            float: right;
+          }
+        }
+      }
+      .money-product{
+        height: 184px;
+        background-color: $backgroundColor;
+        .cell{
+          height: 100%;
+          width: calc(50% - 6px);
+          &:first-child{
+            margin-right: 6px;
+          }
+          &:last-child{
+            margin-left: 6px;
+          }
+        }
+
+        .balance-item{
+          padding-top: 5px;
+          padding-bottom: 5px;
+          white-space: nowrap;
+          .balance-item-detail{
+            letter-spacing: -0.5px;
+          }
+        }
+        .not-balance-item{
+          padding: 10px;
+          >div{
+            white-space: nowrap;
+            padding-top: 2px;
+            padding-bottom: 2px;
+          }
+          >div:first-child{
+            padding-top: 0px;
+            padding-bottom: 2px;
+          }
+          >div:last-child {
+            padding-top: 0px;
+            padding-bottom: 2px;
+          }
+
+        }
+
+        .weak{
+          color: #999;
+        }
+        .strengthen{
+          color: #4A4A4A;
+        }
+
+      }
+      .payment{
+        height: 317px;
+      }
+    }
+    .right{
+      box-sizing: border-box;
+      width: $rightBlockWidth;
+      float: right;
+      background-color: $backgroundColor;
+      >div{
+        background-color: $blockBackgroundColor;
+        margin-bottom: 12px;
+        box-sizing: border-box;
+      }
+      .recent{
+        //padding: 25px 15px 20px 12px;
+        height: 248px;
+      }
+      .goods-receipt{
+        //padding: 25px 20px;
+        height: 143px;
+      }
+      .payment{
+        //padding: 25px 20px;
+        height: 143px;
+      }
+    }
+  }
+
+  .home-link:hover{
+    color: $hoverColor !important;
+    cursor: pointer !important;
+  }
+  .home-link:active{
+    color: darken($hoverColor, 0.18) !important;
+    cursor: pointer !important;
+  }
+
+
+  //结算方式区域
+  .payment-card-wrapper{
+    margin-left: 25px;
+    margin-top: 17px;
+    .payment-card-list-title{
+      height: 42px;
+      line-height: 42px;
+    }
+    .payment-card:first-child{
+      margin-left: 0;
+    }
+  }
+  .process-unit-wrapper{
+    margin-top: 10px;
+    .process-unit{
+      display: inline-block;
+      margin-left: 34px;
+      margin-right: 25px;
+    }
+    .process-unit:first-child, .process-unit:last-child{
+      margin-left: 18px;
+    }
+  }
+
+  .so-simple-block{
+    margin-left: 37px;
+    font-size: 14px;
+    margin-top: 20px;
+    >div{
+      line-height: 28px;
+    }
+    &-label{
+      color: #898989;
+    }
+    &-value{
+      color: #000;
+      padding-left: 10px;
+    }
+  }
+}

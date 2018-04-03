@@ -1,0 +1,8 @@
+body{
+    background-image: url(./images/1.jpeg);
+}
+body #container{
+    width: 400px;
+    height: 400px;
+    vertical-align: middle;
+}

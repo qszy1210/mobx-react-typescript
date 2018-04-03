@@ -1,0 +1,11 @@
+.so-block-clause-card {
+  position: relative;
+  .caret{
+    position: absolute;
+    left: 88px;
+    top: 44px;
+    margin-top: -5.5px;
+    border: 11px solid;
+    border-color: transparent transparent transparent transparent;
+  }
+}
