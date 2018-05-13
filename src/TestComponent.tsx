@@ -9,6 +9,7 @@ import GenId from './genid/GenId';
 import "react-image-gallery/styles/scss/image-gallery.scss";
 import {ShowOrHide} from "./components/ShowOrHide";
 import Triangle from './triangle/Triangle';
+import PromiseDiv from './promise/Promise';
 export interface TestComponentProps {
 }
 
@@ -17,6 +18,9 @@ export default class TestComponent extends React.Component<TestComponentProps, a
     exportInstance.init();
     return (
         <div>
+            <ShowOrHide show={true} title={"测试三角"}>
+            <PromiseDiv/> 
+            </ShowOrHide>
             <ShowOrHide show={true} title={"测试三角"}>
             <Triangle />
             </ShowOrHide>
