@@ -10,6 +10,7 @@ import "react-image-gallery/styles/scss/image-gallery.scss";
 import {ShowOrHide} from "./components/ShowOrHide";
 import Triangle from './triangle/Triangle';
 import PromiseDiv from './promise/Promise';
+import CouponAddCard from './card/CouponAdd';
 export interface TestComponentProps {
 }
 
@@ -18,18 +19,25 @@ export default class TestComponent extends React.Component<TestComponentProps, a
     exportInstance.init();
     return (
         <div>
-            <ShowOrHide show={true} title={"测试三角"}>
+            <ShowOrHide show={true} title={"card"}>
+                <CouponAddCard 
+                type="type"
+                title="指定优惠客户"
+                quantity={100}
+                />
+            </ShowOrHide>
+            <ShowOrHide show={false} title={"button"}>
             <PromiseDiv/> 
             </ShowOrHide>
-            <ShowOrHide show={true} title={"测试三角"}>
+            <ShowOrHide show={false} title={"测试三角"}>
             <Triangle />
             </ShowOrHide>
             <ShowOrHide show={false} title={"测试lambda"}>
                 
             </ShowOrHide>
-            <ShowOrHide show={false} title={"测试atom"}>
+            <ShowOrHide show={false} title={"其他"}>
 
-            </ShowOrHide>
+            
 
             <div style={{display: "none"}}>
                 <GenId/>
@@ -67,6 +75,8 @@ export default class TestComponent extends React.Component<TestComponentProps, a
                               }
                           }/>
             </div>
+
+            </ShowOrHide>
 
         </div>
     );
